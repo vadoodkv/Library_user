@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+
+</head>
+<body>
+    
+
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+        <div class="segment">
+            <h1>Add User</h1>
+        </div>
+    
+        <label>
+            <input type="number" placeholder="Book ID" name="book_id" />
+        </label>
+        <label>
+            <input type="text" placeholder="Book Name" name="book_name" />
+        </label>
+        <label>
+            <input type="number" placeholder="Borrowee ID" name="borrowee_id" />
+        </label>
+        <label>
+            <input type="text" placeholder="Full Name" name="name" />
+        </label>
+        <label>
+            <input type="text" placeholder="Address" name="address" />
+        </label>
+        <label>
+            <input type="text" placeholder="Phone No" name="phone_no"/>
+        </label>
+        <button class="red" type="submit"><ion-icon name="person-add-sharp"></ion-icon>     Add User</button>
+    
+        <div class="segment">
+          <!--   <button class="unit" type="button"><ion-icon name="chevron-back-sharp"></ion-icon></button>
+            <button class="unit" type="button"><ion-icon name="search"></ion-icon></button> -->
+            <button class="unit" type="submit"onclick="location.href='{% static 'landing.html' %}'"><ion-icon name="home-outline"></ion-icon></button>
+    
+        </div>
+    
+    
+
+   
+    
+
+</form>
+
+</body>
+
+</html>
+
+
+

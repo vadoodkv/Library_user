@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+
+<body>
+
+    <form method="GET">
+    
+        <div class="segment">
+            <h1>Search User</h1>
+        </div>
+    
+        <label>
+            <input type="number" placeholder="Book ID" name="bookid"/>
+        </label>
+        <div style="color: rgb(199, 199, 188);">
+        <h4 style="text-align: center;">OR</h4>
+        </div>
+        <label>
+            <input type="text" placeholder="Book Name" name="bookname"/>
+        </label>
+        <button class="red" type="submit"><ion-icon name="search-sharp"></ion-icon> Search User</button>
+    
+        <div class="segment">
+           <!-- <button class="unit" type="button"><ion-icon name="chevron-back-sharp"></ion-icon></button>
+            <button class="unit" type="button"><ion-icon name="person-add-outline"></ion-icon></button> -->
+            <button class="unit" type="button"><ion-icon name="home-outline"></ion-icon></button>
+    
+        </div>
+    
+    
+    
+    </form>
+
+
+
+    <ul>
+        {% for item in data %}
+        <li>{{ item.Name }}</li>
+        <li>{{ item.Address }}</li>
+        <li>{{ item.Book_name }}</li>
+        <!-- Render other fields as needed -->
+        {% endfor %}
+    </ul>
+
+
+
+
+</body>
+</html>

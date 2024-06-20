@@ -1,0 +1,60 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles_land.css' %}">
+
+
+</head>
+
+
+<body style="background-color: rgb(22, 21, 21);">
+    
+   <div class="title" style="color: rgba(197, 197, 207, 0.854);">
+    <h1>LIBRARY USER</h1>
+   </div>
+
+    <div class="buttons">
+    
+        <!-- Add User -->
+        <div scale-up style="--order:1; --bg:35, 48, 55">
+            <button type="button"onclick="location.href={% url 'he' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+                <p>Add User</p>
+            </button>
+        </div>
+    
+        <!-- Search User -->
+        <div scale-up style="--order:2; --bg:35, 48, 55">
+            <button type="button"onclick="location.href={% url 'se' %}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+                <p>Search User</p>
+            </button>
+        </div>
+    
+        </button>
+    </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
